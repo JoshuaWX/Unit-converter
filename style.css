@@ -2,6 +2,7 @@ body{
     text-align: center;
     margin:0;
     font-family: "Inter" , sans-serif;
+
 }
 
 .hero{
@@ -122,23 +123,53 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
 }
-@media (max-width: 600px){
+@media (max-width: 380px) {
     .hero{
-        height:365px;
+        height:266px;
+        width:100%;
     }
     .conversion-board{
-        height:60vh;
+        height:calc(100vh - 266px);
+        width:100%;
+    }
+    .conversion-board div{
+        height:130px;
+        width:350px;
+    }
+    #convert-input{
+        width:80px;
+        height:50px;
+    }
+
+}
+@media (min-width: 381px){
+    .hero{
+        height:365px;
+        width:100%;
+    }
+    .hero h1{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .conversion-board{
+        height:calc(100vh - 365px);
+        width:100%;
     }
     .conversion-board div{
         height:155px;
-        width:auto;
+        width:380px;
     }
     .length-div{
         margin-top: 30px;
         margin-bottom: 20px;
     }
     .mass-div{
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         margin-top: 20px;
+    }
+}
+@media (min-width: 768px){
+    .conversion-board div{
+        width:700px;
     }
 }
