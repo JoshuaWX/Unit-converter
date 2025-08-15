@@ -173,3 +173,15 @@ input[type="number"] {
         width:700px;
     }
 }
+@media(min-width: 1200px){
+    .conversion-board div{
+        width: 1000px;
+        height:160px;
+    }
+    .hero{
+        height: 280px;
+    }
+    .conversion-board{
+        height:calc(100vh - 280px);
+    }
+}
