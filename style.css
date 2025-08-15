@@ -74,6 +74,10 @@ input[type="number"] {
     margin:0 0 20px 0;
 
 }
+#convert-btn:hover{
+    background:#1F2937;
+    cursor:pointer;
+}
 
 .conversion-board{
     max-width:100%;
@@ -182,6 +186,6 @@ input[type="number"] {
         height: 280px;
     }
     .conversion-board{
-        height:calc(100vh - 280px);
+        height:calc(70vh);
     }
 }
