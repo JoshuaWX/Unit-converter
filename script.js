@@ -8,16 +8,28 @@ let litGal = document.getElementById("lit-gal")
 let kgP = document.getElementById("kg-p")
 let convertInput = document.getElementById("convert-input")
 let convertBtn = document.getElementById("convert-btn")
+let customAlert = document.getElementById('custom-alert')
 
 convertBtn.addEventListener("click", function(){
-    convertToFeet()
-    convertToMeter()
-    convertToGallon()
-    convertToLiters()
-    convertToPounds()
-    convertToKg()
-    btnClicked()
- 
+    if (convertInput.value === ""){
+        customAlert.textContent= "Please enter a value"
+        customAlert.style.background = "red"
+        customAlert.style.display = 'block'
+        
+        setTimeout(() => {
+            customAlert.style.display = 'none'
+        }, 500)
+
+    } else{
+        convertToFeet()
+        convertToMeter()
+        convertToGallon()
+        convertToLiters()
+        convertToPounds()
+        convertToKg()
+        btnClicked()
+    
+    }
 })
 
 function convertToFeet(){
@@ -52,12 +64,13 @@ function convertToKg(){
 }
 function btnClicked(){
     convertInput.value = ""
-    let customAlert = document.getElementById('custom-alert');
-    customAlert.style.display = 'block';
-    
+    customAlert.textContent= "Converting Values..."
+    customAlert.style.background = "#6943FF"
+    customAlert.style.display = 'block'
+
     setTimeout(() => {
-        customAlert.style.display = 'none';
-    }, 500);
+        customAlert.style.display = 'none'
+    }, 500)
 }
 
 
