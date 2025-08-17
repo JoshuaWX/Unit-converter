@@ -17,6 +17,7 @@ convertBtn.addEventListener("click", function(){
     convertToPounds()
     convertToKg()
     btnClicked()
+ 
 })
 
 function convertToFeet(){
@@ -51,7 +52,12 @@ function convertToKg(){
 }
 function btnClicked(){
     convertInput.value = ""
-    alert("Converting Values...")
+    let customAlert = document.getElementById('custom-alert');
+    customAlert.style.display = 'block';
+    
+    setTimeout(() => {
+        customAlert.style.display = 'none';
+    }, 500);
 }
 
 
